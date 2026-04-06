@@ -11,7 +11,7 @@ html,body,#__next{
 }
 
 body{
-  @apply bg-white text-gray-900 antialiased;
+  @apply bg-gray-900 text-gray-100 antialiased;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   line-height:1.6;
 }
@@ -25,5 +25,68 @@ body{
 }
 
 .header-link{
-  @apply text-gray-700 hover:text-accent transition-colors;
+  @apply text-current hover:text-accent transition-colors;
+}
+
+.card-bg{
+  /* utility for darker card backgrounds */
+  @apply bg-gray-800;
+}
+
+/* Theme variables and light-mode overrides */
+:root{
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --card-bg: #111827;
+  --card-border: #374151;
+  --header-bg: #0f172a;
+  --footer-bg: #0f172a;
+}
+
+body{
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header{
+  background-color: var(--header-bg);
+}
+
+footer{
+  background-color: var(--footer-bg);
+}
+
+.card{
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  color: var(--text);
+}
+
+/* Ensure header/footer textual elements follow theme variables; exclude accent buttons (bg-accent) so CTA text stays white */
+header, footer {
+  color: var(--text);
+}
+
+header a:not(.bg-accent), header p, header h1, header h2, header h3, header h4 {
+  color: var(--text) !important;
+}
+
+footer a:not(.bg-accent), footer p, footer h1, footer h2, footer h3, footer h4 {
+  color: var(--text) !important;
+}
+
+.light{
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --header-bg: #ffffff;
+  --footer-bg: #f9fafb;
+}
+
+/* Utility to use the muted color variable */
+.muted{
+  color: var(--muted) !important;
 }

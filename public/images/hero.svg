@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+  <rect width="1200" height="600" rx="12" fill="#0f172a" />
+  <g fill="#0ea5a4" font-family="Inter, Arial, sans-serif">
+    <text x="60" y="120" font-size="48" font-weight="700">Career Upsteps</text>
+    <text x="60" y="180" font-size="24" fill="#cde8e6">Immigration & career consultancy</text>
+  </g>
+  <circle cx="980" cy="120" r="80" fill="#0ea5a4" opacity="0.12" />
+</svg>
